@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="bookstore.group_user" model="res.groups">
+        <field name="name">User</field>
+    </record>
+    <record id="bookstore.group_manager" model="res.groups">
+        <field name="name">Manager</field>
+    </record>
+</odoo>
