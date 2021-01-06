@@ -6,7 +6,11 @@
     'author': 'Kevin Herney R.',
     'depends': ['bookstore'],
     'data': [
-        "views/bookstore_member_book.xml"
+        "security/library_security.xml",
+        "security/ir.model.access.csv",
+        "views/bookstore_member_book.xml",
+        "views/library_member.xml",
+        "views/member_menus.xml",
     ],
     'installable': True,
     'auto_install': False,

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="bookstore_member.library_member_menu"
+              name="Library members"
+              parent="bookstore.bookstore_root"
+              sequence="2"/>
+
+    <menuitem id="bookstore_member.member_menu"
+              name="Members"
+              parent="bookstore_member.library_member_menu"
+              action="bookstore_member.library_member_action"
+              sequence="1"/>
+</odoo>
