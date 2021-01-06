@@ -12,4 +12,15 @@
         </field>
     </record>
 
+    <record id="bookstore_member.book_form_book_active" model="ir.ui.view">
+        <field name="name">Read only book active field</field>
+        <field name="model">bookstore.book</field>
+        <field name="inherit_id" ref="bookstore.book_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='book_active']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>
