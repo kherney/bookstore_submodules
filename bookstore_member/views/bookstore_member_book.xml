@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <record id="bookstore_member.book_search_extend" model="ir.ui.view">
+        <field name="name">Book is available Field</field>
+        <field name="model">bookstore.book</field>
+        <field name="inherit_id" ref="bookstore.book_form"/>
+        <field name="arch" type="xml">
+            <field name="book_active" position="after">
+                <field name="is_available"/>
+            </field>
+        </field>
+    </record>
+
 </odoo>
