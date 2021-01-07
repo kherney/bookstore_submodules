@@ -19,11 +19,22 @@
             <form string="Library Members ">
                 <sheet>
                     <group>
-                        <field name="member_partner_id"/>
-                        <field name="member_card_number"/>
-                        <field name="member_partner_id"/>
+                        <group name="group_top">
+                            <field name="member_card_number"/>
+<!--                            <field name="member_partner_id" attrs="{'invisible': True}"/>-->
+                        </group>
+                        <group name="group_right">
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="company_id"/>
+                        </group>
                     </group>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                </div>
             </form>
         </field>
     </record>
