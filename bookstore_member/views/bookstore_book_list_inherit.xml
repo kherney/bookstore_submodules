@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="bookstore_member.template_bookstore_list_inherit"
+              name="Book List inherit"
+              inherit_id="bookstore.book_list_template">
+        <xpath expr="//span[@t-field='book.book_publisher']" position="after">
+            <t t-if="not book.is_available">
+                <b>(Not Available)</b>
+            </t>
+        </xpath>
+        <xpath expr="//span[@t-field='book.book_name']" position="before">
+            <t>
+                <br/>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>
