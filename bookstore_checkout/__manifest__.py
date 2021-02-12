@@ -2,7 +2,7 @@
     'name': 'bookstore_checkout',
     'description': 'members can borrow their books',
     'author': 'Kherney',
-    'depends': ['bookstore'],
+    'depends': ['bookstore_member'],
     'data': [
         'security/ir.model.access.csv',
         'views/checkout_menu.xml',
