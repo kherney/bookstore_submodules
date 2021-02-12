@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="bookstore_checkout_form_view" model="ir.ui.view">
+            <field name="name">bookstore_checkout_form</field>
+            <field name="model">bookstore.checkout</field>
+            <field name="arch" type="xml">
+                <form string="Books Checkout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="user_id"/>
+                            </group>
+                            <group>
+                                <field name="request_date"/>
+                            </group>
+                        </group>
+                        <page string="Books">
+                            <field name="line_ids"/>
+                        </page>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="bookstore_checkout_tree_view" model="ir.ui.view">
+            <field name="name">bookstore_checkout_tree</field>
+            <field name="model">bookstore.checkout</field>
+            <field name="arch" type="xml">
+                <tree string="Books Checkout ">
+                    <field name="user_id"/>
+                    <field name="member_id"/>
+                    <field name="request_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="bookstore_checkout_act_window" model="ir.actions.act_window">
+            <field name="name">bookstore_checkout_action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bookstore.checkout</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Borrow Books
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

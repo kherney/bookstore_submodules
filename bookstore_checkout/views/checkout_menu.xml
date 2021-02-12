@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="bookstore_checkout_menu"
+              name="checkout"
+              parent="bookstore.bookstore_root"
+              action=""
+              sequence="4"/>
+</odoo>
