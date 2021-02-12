@@ -2,8 +2,8 @@
 <odoo>
     <!-- This Menu Item Must have a parent -->
     <menuitem id="bookstore_checkout_menu"
-              name="checkout"
+              name="Checkout"
               parent="bookstore.bookstore_root"
-              action=""
+              action="bookstore_checkout.bookstore_checkout_act_window"
               sequence="4"/>
 </odoo>
