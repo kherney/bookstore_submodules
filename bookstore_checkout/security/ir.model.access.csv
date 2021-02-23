@@ -2,3 +2,5 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_bookstore_checkout_manager,bookstore.checkout,model_bookstore_checkout,bookstore.group_manager,1,1,1,1
 access_bookstore_checkout_user,bookstore.checkout,model_bookstore_checkout,bookstore.group_user,1,1,0,0
 access_bookstore_checkout_line_user,bookstore.checkout.line,model_bookstore_checkout_line,bookstore.group_user,1,1,1,1
+access_checkout_stage_user,bookstore.checkout.stage,model_bookstore_checkout_stage,bookstore.group_user,1,0,0,0
+access_checkout_stage_manager,bookstore.checkout.stage,model_bookstore_checkout_stage,bookstore.group_manager,1,1,1,1

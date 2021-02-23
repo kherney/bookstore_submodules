@@ -7,6 +7,7 @@
         'security/ir.model.access.csv',
         'views/checkout_menu.xml',
         'views/checkout_view.xml',
+        'data/bookstore_checkout_stage.xml',
     ],
     'installable': True,
     'auto_install': False

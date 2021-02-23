@@ -19,6 +19,20 @@ class BookstoreCheckout(models.Model):
                                "checkout_id",
                                string="Borrowed Books")
 
+    stage_id = fields.Many2one(comodel_name="bookstore.checkout.stage",
+                               string="States",
+                               group_expand="_group_expand_stage_id",
+                               default="_default_stage",)
+
+    @api.model
+    def _default_stage(self):
+        stage_env = self.env['bookstore.checkout.stage']
+        return stage_env.search([], limit=1)
+
+    @api.model
+    def _group_expand_stage_id(self, stages, domain, order):
+        return stages.search([], order=order)
+
 
 class BookstoreCheckout(models.Model):
     _name = "bookstore.checkout.line"
