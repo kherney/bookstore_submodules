@@ -34,6 +34,18 @@ class BookstoreCheckout(models.Model):
     def _group_expand_stage_id(self, stages, domain, order):
         return stages.search([], order=order)
 
+    @api.onchange('member_book_id')
+    def onchange_member_book_id(self):
+        date = fields.Date.today()
+        if self.request_date != date:
+            self.request_date = fields.Date.today()
+            return {
+                'warning': {
+                    'title': 'Changed Request Date',
+                    'message': 'Request date changed to today'
+                }
+            }
+
 
 class BookstoreCheckout(models.Model):
     _name = "bookstore.checkout.line"
