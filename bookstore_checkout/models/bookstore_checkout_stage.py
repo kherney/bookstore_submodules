@@ -4,7 +4,7 @@ from odoo import models, fields
 class BookstoreCheckout(models.Model):
     _name = "bookstore.checkout.stage"
     _description = "Checkout Stage"
-    _order = ""
+    _order = "state"
 
     name = fields.Char()
     sequence = fields.Integer(default=10)
